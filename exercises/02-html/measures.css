@@ -1,0 +1,9 @@
+#mycontainer {
+  background-color: red;
+  width: 50rem;
+}
+
+body {
+  width: 50%;
+  background-color: blue;
+}

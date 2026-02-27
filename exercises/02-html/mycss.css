@@ -1,0 +1,20 @@
+header,
+p.intro {
+  color: darkorange;
+  background-color: brown;
+}
+
+p {
+  border: solid 5px;
+  border-color: black;
+  padding: 2rem;
+}
+
+html {
+  font-size:small;
+}
+
+li {
+  background-color: blue;
+  visibility: hidden;
+}
