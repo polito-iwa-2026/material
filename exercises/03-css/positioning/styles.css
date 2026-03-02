@@ -33,8 +33,9 @@ body {
 .absolute {
   position: absolute;
   background-color: crimson;
-  top: 0;
-  right: 0;
+  margin: 0px;
+  top: 5px;
+  right: 10px;
   width: 100px;
   height: 50px;
 }
@@ -43,8 +44,8 @@ body {
 .fixed {
   position: fixed;
   background-color: green;
-  bottom: 10px;
-  right: 10px;
+  bottom: 50px;
+  right: 50px;
 }
 
 /* Extra space for scrolling */

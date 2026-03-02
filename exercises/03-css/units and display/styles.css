@@ -44,7 +44,7 @@ html {
 
 /* DISPLAY */
 
-.block {
+#iwa-block {
   display: block;
   background-color: orange;
   margin: 10px 0;
