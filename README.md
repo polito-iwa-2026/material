@@ -1,4 +1,4 @@
-# Introduction to Web Applications (2026/2026)
+# Introduction to Web Applications (2025/2026)
 
 Materials for the _[Introduction to Web Applications](https://github.com/polito-iwa-2026)_ course, offered to third-year students of the Bachelor's Degree in Computer Engineering at Politecnico di Torino.
 
