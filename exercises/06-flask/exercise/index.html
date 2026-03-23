@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to ImparaTo</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <div class="container">
+    <!-- Header -->
+    <header class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom">
+      <a href="#" class="d-flex align-items-center text-decoration-none link-body-emphasis">
+        <img src="images/imparato.png" alt="ImparaTo logo" width="100" class="me-2">
+        <span class="fs-4 fw-bold">ImparaTo</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Sign In</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
+      </ul>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand d-lg-none" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Find a Tutor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My Favourites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My Announcements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Who We Are</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="row g-4 mb-5">
+
+      <!-- Left Sidebar -->
+      <aside class="col-12 col-md-3 col-lg-2">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Search</h5>
+            <p class="text-muted small">Find the right tutor for your university courses.</p>
+
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="e.g. Calculus">
+            </div>
+
+            <div class="mb-3">
+              <label for="level" class="form-label">Level</label>
+              <select class="form-select" id="level">
+                <option selected>Choose...</option>
+                <option>First Year</option>
+                <option>Second Year</option>
+                <option>Third Year</option>
+                <option>Advanced</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary w-100">
+              <i class="bi bi-search me-1"></i> Search
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Center Hero -->
+      <section class="col-12 col-md-6 col-lg-8">
+        <div class="p-5 text-center bg-body-tertiary rounded-3 shadow-sm h-100 d-flex flex-column justify-content-center">
+          <img class="d-block mx-auto mb-4" src="images/imparato.png" alt="ImparaTo logo" width="120">
+          <h1 class="display-5 fw-bold">Find the Right Tutor for Your University Courses</h1>
+          <div class="col-lg-9 mx-auto">
+            <p class="lead mb-4">
+              ImparaTo is a tutoring platform designed to help university students find qualified tutors for the
+              subjects they need most. Whether you are preparing for an exam, reviewing difficult topics, or looking
+              for regular academic support, ImparaTo connects you with tutors who can help you study with confidence.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Find a Tutor</button>
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Sidebar -->
+      <aside class="col-12 col-md-3 col-lg-2">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Most Popular Tutors</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item px-0">
+                <strong>Emma Johnson</strong><br>
+                <small class="text-muted">Mathematics</small>
+              </li>
+              <li class="list-group-item px-0">
+                <strong>David Smith</strong><br>
+                <small class="text-muted">Physics</small>
+              </li>
+              <li class="list-group-item px-0">
+                <strong>Sophia Brown</strong><br>
+                <small class="text-muted">Computer Science</small>
+              </li>
+              <li class="list-group-item px-0">
+                <strong>Michael Lee</strong><br>
+                <small class="text-muted">Chemistry</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-auto border-top bg-body-tertiary">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <span class="text-body-secondary">© 2026 ImparaTo. All rights reserved.</span>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <ul class="nav justify-content-md-end justify-content-start">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Tutors</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
