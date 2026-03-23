@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hello IWA</title>
-  </head>
-  <body>
-    <h1>Hello IWA!</h1>
-  </body>
+
+<head>
+  <title>Hello IWA</title>
+</head>
+
+<body>
+  <h1>Loop example</h1>
+  <img src="{{ url_for('static', filename='images/imparato.png') }}" alt="Logo" width="200" />
+  <ul>
+    {% for item in pitems %}
+    <li>{{ item | e }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{{ url_for('conditional') }}">Link to the conditional example</a>
+</body>
+
 </html>
