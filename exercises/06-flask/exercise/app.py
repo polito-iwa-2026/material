@@ -43,7 +43,8 @@ def home():
 def tutors():
     return render_template("tutors.html", ptutors=tutors_list)
 
+
 @app.route("/single_tutor/<int:id_tutor>")
 def single_tutor(id_tutor):
     selected_tutor = tutors_list[id_tutor]
-    return render_template("tutor.html", ptutor = selected_tutor)
+    return render_template("tutor.html", ptutor=selected_tutor)
