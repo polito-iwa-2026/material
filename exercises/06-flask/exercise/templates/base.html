@@ -17,7 +17,7 @@
   <div class="container">
     <!-- Header -->
     <header class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom">
-      <a href="#" class="d-flex align-items-center text-decoration-none link-body-emphasis">
+      <a href="{{ url_for('home') }}" class="d-flex align-items-center text-decoration-none link-body-emphasis">
         <img src="{{ url_for('static', filename='images/imparato.png') }}" alt="ImparaTo logo" width="100" class="me-2">
         <span class="fs-4 fw-bold">ImparaTo</span>
       </a>
@@ -40,10 +40,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav nav-underline">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ url_for('tutors') }}">Find a Tutor</a>
+              <a class="nav-link {%block active_tutors %} {% endblock %}" aria-current="page"
+                href="{{ url_for('tutors') }}">Find a Tutor</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">History</a>
+              <a class="nav-link {%block active_history %} {% endblock %}" href="{{ url_for('history') }}">History</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">My Favourites</a>
@@ -63,6 +64,9 @@
     <main class="row g-4 mb-5">
       {% block content %}
       {% endblock %}
+      {% if not phome and not plink %}
+      <a href="{{ url_for('home') }}">Go back</a>
+      {% endif %}
     </main>
   </div>
 
@@ -76,7 +80,7 @@
 
         <div class="col-12 col-md-6">
           <ul class="nav justify-content-md-end justify-content-start">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link px-2 text-body-secondary">Home</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Tutors</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>

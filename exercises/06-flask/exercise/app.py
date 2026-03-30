@@ -36,7 +36,13 @@ tutors_list = [
 @app.route("/")
 def home():
     popular = [t for t in tutors_list if t["reviews_number"] > 1]
-    return render_template("index.html", ptutors=popular)
+    are_we_in_home = True
+    return render_template("index.html", ptutors=popular, phome=are_we_in_home)
+
+
+@app.route("/myhistory")
+def history():
+    return render_template("history.html")
 
 
 @app.route("/tutors")
@@ -47,4 +53,5 @@ def tutors():
 @app.route("/single_tutor/<int:id_tutor>")
 def single_tutor(id_tutor):
     selected_tutor = tutors_list[id_tutor]
-    return render_template("tutor.html", ptutor=selected_tutor)
+    parent_link="tutors"
+    return render_template("tutor.html", ptutor=selected_tutor, plink = parent_link)
