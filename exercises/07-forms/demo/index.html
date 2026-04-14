@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Forms demo</title>
+</head>
+
+<body>
+  <form action="new_user" method="POST">
+    <label for="usrname">Username</label>
+    <input type="text" id="usrname" name="usrname" placeholder="Insert your username" required/><br><br>
+
+    <textarea id="story" name="story" cols="10" rows="2"></textarea><br><br>
+    <input type="file" name="profilepicture" accept=".pdf">
+    <br><br>
+    <label for='t-shirt'>T-Shirt Size</label><select id='t-shirt' name='t-shirt'>
+      <option value='xs'>Extra Small
+      </option>
+      <option value='s'>Small</option>
+      <option value='m'>Medium</option>
+      <option value='l'>Large</option>
+    </select>
+    <br><br>
+
+    <label for="cheese">Do you like cheese?</label>
+    <input type="radio" name="preference" id="cheese">
+
+    <label for="peas">Do you like peas?</label>
+    <input type="radio" name="preference" id="peas">
+
+<br><br>
+    <button type="submit">Send</button>
+    <button type="reset">Clear</button>
+  </form>
+</body>
+
+</html>
