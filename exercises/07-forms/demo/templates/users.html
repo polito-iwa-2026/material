@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Forms demo</title>
+</head>
+
+<body>
+  <h1>Registered users</h1>
+  <ul>
+    {% for user in pusers %}
+    <li>{{user.name}} {{user.tshirt}}</li>
+    {% endfor %}
+  </ul>
+</body>
+
+</html>
