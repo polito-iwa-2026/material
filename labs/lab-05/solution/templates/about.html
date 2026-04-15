@@ -7,7 +7,7 @@
   {% for dev in developers %}
   <div class="col-lg-4">
     <div><img class="devimg rounded-circle" src="{{ url_for('static', filename= dev.devimg ) }}"
-        alt="Questa è l'immagine dell'utente {{ dev.devimg |e }}"></div>
+        alt="This is the image of user {{ dev.devimg |e }}"></div>
     <h2 class="fw-normal my-4">{{ dev.name |e }}</h2>
     <figure class="text-center">
       <blockquote class="blockquote">
