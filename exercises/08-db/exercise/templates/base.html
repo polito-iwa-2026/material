@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %}</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <div class="container">
+    <!-- Header -->
+    <header class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom">
+      <a href="{{ url_for('home') }}" class="d-flex align-items-center text-decoration-none link-body-emphasis">
+        <img src="{{ url_for('static', filename='images/imparato.png') }}" alt="ImparaTo logo" width="100" class="me-2">
+        <span class="fs-4 fw-bold">ImparaTo</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Sign In</a></li>
+        <li class="nav-item"><a href="{{ url_for('signup') }}" class="nav-link">Register</a></li>
+      </ul>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand d-lg-none" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav nav-underline">
+            <li class="nav-item">
+              <a class="nav-link {%block active_tutors %} {% endblock %}" aria-current="page"
+                href="{{ url_for('tutors') }}">Find a Tutor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {%block active_history %} {% endblock %}" href="{{ url_for('history') }}">History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My Favourites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My Announcements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Who We Are</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="row g-4 mb-5">
+      {% block content %}
+      {% endblock %}
+      {% if not phome and not plink %}
+      <a href="{{ url_for('home') }}">Go back</a>
+      {% endif %}
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-auto border-top bg-body-tertiary">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <span class="text-body-secondary">© 2026 ImparaTo. All rights reserved.</span>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <ul class="nav justify-content-md-end justify-content-start">
+            <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Tutors</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
