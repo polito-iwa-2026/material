@@ -25,7 +25,7 @@ def handle_form():
     new_user = {"name": name, "email": email, "tshirt": size}
 
     profile_img = request.files["profile_img"]
-    profile_img.save(profile_img.filename)
+    profile_img.save("static/" + profile_img.filename)
 
     users.append(new_user)
 
