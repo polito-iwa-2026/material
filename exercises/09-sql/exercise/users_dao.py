@@ -37,4 +37,4 @@ def get_id_by_email(p_email):
     cursor.close()
     conn.close()
 
-    print(db_user)
+    return db_user
