@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Become a Tutor
+{% endblock %}
+
+{%block active_new_tutor %}
+active
+{% endblock %}
+
+{% block content %}
+<h3>Become one of us!</h3>
+<form action="/register_tutor" method="post">
+
+  <label for="txt_email" class="form-label">Email </label>
+  <input type="email" class="form-control" name="txt_email" id="txt_email" placeholder="Insert the Email address you registered with"
+    required />
+
+  <label for="txt_bio" class="form-label">Bio </label>
+  <textarea type="text" class="form-control" name="txt_bio" id="txt_bio" placeholder="Tell us something about you"
+    rows="3" required></textarea>
+  <br>
+  <button type="submit" class="btn btn-primary">Send</button>
+</form>
+{% endblock %}
