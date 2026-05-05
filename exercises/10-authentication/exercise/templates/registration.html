@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Our tutors
+{% endblock %}
+
+{%block active_tutors %}
+active
+{% endblock %}
+
+{% block content %}
+<h3>Create your ImparaTo account!</h3>
+
+<form action="/register" method="post" enctype="multipart/form-data">
+
+  <label for="txt_name" class="form-label">Name </label>
+  <input type="text" class="form-control" name="txt_name" id="txt_name" placeholder="Insert your name" minlength="3"
+    maxlength="30" pattern="[A-Za-z]{3,30}" required />
+
+  <label for="txt_surname" class="form-label">Surname </label>
+  <input type="text" class="form-control" name="txt_surname" id="txt_surname" placeholder="Insert your surname"
+    minlength="3" maxlength="30" pattern="[A-Za-z]{3,30}" required />
+
+  <label for="txt_email" class="form-label">Email </label>
+  <input type="email" class="form-control" name="txt_email" id="txt_email" placeholder="Insert your Email address"
+    required />
+
+  <label for="txt_password" class="form-label">Password </label>
+  <input type="password" class="form-control" name="txt_password" id="txt_password" placeholder="Insert a password"
+    required />
+
+  <label for="profile_img" class="form-label">Upload your profile image </label>
+  <input type="file" id="profile_img" name="profile_img" accept=".jpg, .png, .jpeg" />
+
+  <br>
+  <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+{% endblock %}

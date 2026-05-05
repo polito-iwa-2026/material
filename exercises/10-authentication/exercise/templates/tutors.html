@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Our tutors
+{% endblock %}
+
+{%block active_tutors %} 
+active
+{% endblock %}
+
+{% block content %}
+<div class="row row-cols-2 row-cols-md-3 g-4">
+  {% for tutor in ptutors %}
+  <div class="col">
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename=tutor.img) }}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{tutor.name}} {{tutor.surname}}</h5>
+            <p class="card-text">{{tutor.presentation}}</p>
+            <p class="card-text"><small class="text-body-secondary">{{tutor.subject}}</small></p>
+            <a href="{{url_for('single_tutor', id_tutor = tutor.id)}}">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
